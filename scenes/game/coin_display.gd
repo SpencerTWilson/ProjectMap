@@ -18,5 +18,4 @@ func update_display():
 	var coin_text: String = ""
 	for player in player_coins:
 		coin_text += "%s has %d coins.\n" % [MultiplayerManager.stable_player_data[player]["name"], player_coins[player]]
-	print(player_coins)
 	text = coin_text

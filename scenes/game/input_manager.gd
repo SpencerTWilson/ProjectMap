@@ -30,7 +30,7 @@ func _input(event: InputEvent) -> void:
 		move_dir = "West"
 	elif event.is_action_pressed("move_up_left"):
 		move_dir = "Northwest"
-	 
+
 	#if we aren't moving then we don't need to do anything here
 	if move_dir == "":
 		return

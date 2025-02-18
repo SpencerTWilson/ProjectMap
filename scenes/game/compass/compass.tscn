@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=3 uid="uid://4kak3hkqfnb5"]
+
+[ext_resource type="Texture2D" uid="uid://ddoicvdh7woe4" path="res://assets/compass/upscaled/compass_cell.png" id="1_jwfqt"]
+[ext_resource type="Texture2D" uid="uid://b14eqvnysy47l" path="res://assets/compass/pixel/arrow.png" id="2_1fn51"]
+
+[node name="Compass" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cell" type="Sprite2D" parent="."]
+texture = ExtResource("1_jwfqt")
+
+[node name="Exits" type="Node2D" parent="Cell"]
+
+[node name="North" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(0, -125)
+texture = ExtResource("2_1fn51")
+
+[node name="East" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(125, 0)
+rotation = 1.5708
+texture = ExtResource("2_1fn51")
+
+[node name="South" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(0, 125)
+rotation = -3.14159
+texture = ExtResource("2_1fn51")
+
+[node name="West" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(-125, 0)
+rotation = -1.5708
+texture = ExtResource("2_1fn51")
+
+[node name="Northeast" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(88.388, -88.388)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_1fn51")
+
+[node name="Southeast" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(88.388, 88.388)
+rotation = 2.35619
+scale = Vector2(1, 1)
+texture = ExtResource("2_1fn51")
+
+[node name="Southwest" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(-88.388, 88.388)
+rotation = -2.35619
+texture = ExtResource("2_1fn51")
+
+[node name="Northwest" type="Sprite2D" parent="Cell/Exits"]
+position = Vector2(-88.388, -88.388)
+rotation = -0.785398
+texture = ExtResource("2_1fn51")
+
+[node name="Entrances" type="Node2D" parent="Cell"]
+
+[node name="North" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(0, 50)
+texture = ExtResource("2_1fn51")
+
+[node name="East" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(-50, 0)
+rotation = 1.5708
+texture = ExtResource("2_1fn51")
+
+[node name="South" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(0, -50)
+rotation = -3.14159
+texture = ExtResource("2_1fn51")
+
+[node name="West" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(50, 0)
+rotation = -1.5708
+texture = ExtResource("2_1fn51")
+
+[node name="Northeast" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(-35.355, 35.355)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("2_1fn51")
+
+[node name="Southeast" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(-35.355, -35.355)
+rotation = 2.35619
+scale = Vector2(1, 1)
+texture = ExtResource("2_1fn51")
+
+[node name="Southwest" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(35.355, -35.355)
+rotation = -2.35619
+scale = Vector2(1, 1)
+texture = ExtResource("2_1fn51")
+
+[node name="Northwest" type="Sprite2D" parent="Cell/Entrances"]
+visible = false
+position = Vector2(35.355, 35.355)
+rotation = -0.785398
+texture = ExtResource("2_1fn51")

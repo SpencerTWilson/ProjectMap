@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn47hi7rqv4b1"
-path="res://.godot/imported/compass_west.png-df1d865ae43aaebb76b9bead13ddf137.ctex"
+uid="uid://b14eqvnysy47l"
+path="res://.godot/imported/arrow.png-faeab52607d1e1e3623c221a17e4358b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/compass/pixel/compass_west.png"
-dest_files=["res://.godot/imported/compass_west.png-df1d865ae43aaebb76b9bead13ddf137.ctex"]
+source_file="res://assets/compass/pixel/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-faeab52607d1e1e3623c221a17e4358b.ctex"]
 
 [params]
 
