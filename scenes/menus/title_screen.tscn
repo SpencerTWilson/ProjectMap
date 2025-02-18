@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cclxkp4mjgsbs"]
+
+[ext_resource type="Theme" uid="uid://od3dtet0v7is" path="res://scenes/menus/themes/Title.tres" id="1_1o07f"]
+[ext_resource type="Theme" uid="uid://bs0jx1j8q2pqp" path="res://scenes/menus/themes/Buttons.tres" id="2_ngttd"]
+[ext_resource type="Script" path="res://scenes/menus/quit_btn.gd" id="3_4hnqk"]
+[ext_resource type="Script" path="res://scenes/menus/host_btn.gd" id="3_dq78w"]
+[ext_resource type="Script" path="res://scenes/menus/switch_scenes_btn.gd" id="3_ql3c0"]
+[ext_resource type="Script" path="res://scenes/menus/settings/settings_button.gd" id="4_21euh"]
+
+[node name="Title Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 306.0
+offset_right = -306.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_1o07f")
+text = "Map Game"
+horizontal_alignment = 1
+
+[node name="HostBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ngttd")
+text = "Host Game"
+script = ExtResource("3_dq78w")
+lobby_file = "res://scenes/menus/lobby/lobby.tscn"
+
+[node name="JoinBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ngttd")
+text = "Join Game"
+script = ExtResource("3_ql3c0")
+next_scene = "res://scenes/menus/join/join.tscn"
+
+[node name="SettingsBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ngttd")
+text = "Settings"
+script = ExtResource("4_21euh")
+
+[node name="QuitBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ngttd")
+text = "Quit"
+script = ExtResource("3_4hnqk")

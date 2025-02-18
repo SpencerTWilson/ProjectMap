@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddvun70p6ri3"]
+
+[ext_resource type="Script" path="res://scenes/menus/join/join_button.gd" id="1_jfkjw"]
+[ext_resource type="Theme" uid="uid://bs0jx1j8q2pqp" path="res://scenes/menus/themes/Buttons.tres" id="1_t4y3h"]
+[ext_resource type="Theme" uid="uid://od3dtet0v7is" path="res://scenes/menus/themes/Title.tres" id="2_q6wik"]
+[ext_resource type="Script" path="res://scenes/menus/switch_scenes_btn.gd" id="2_wojsg"]
+[ext_resource type="Script" path="res://scenes/menus/quit_btn.gd" id="3_1lnbf"]
+
+[node name="Join" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_t4y3h")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.207
+anchor_right = 0.793
+anchor_bottom = 1.0
+offset_left = 0.53598
+offset_right = -0.536072
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_q6wik")
+text = "Join"
+horizontal_alignment = 1
+
+[node name="IPTextEdit" type="TextEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "IP Address"
+scroll_fit_content_height = true
+
+[node name="JoinButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Join"
+script = ExtResource("1_jfkjw")
+lobby_file = "res://scenes/menus/lobby/lobby.tscn"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+script = ExtResource("2_wojsg")
+next_scene = "res://scenes/menus/title_screen.tscn"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+script = ExtResource("3_1lnbf")

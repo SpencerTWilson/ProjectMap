@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8k524anf1e6"]
+
+[ext_resource type="Script" path="res://scenes/game/compass/tiny_compass_display.gd" id="1_8xxi8"]
+[ext_resource type="Texture2D" uid="uid://mkjpgnb46prm" path="res://assets/compass/upscaled/compass_north.png" id="2_mfdau"]
+[ext_resource type="Texture2D" uid="uid://c6a3dgkdv56cw" path="res://assets/compass/upscaled/compass_east.png" id="3_33y5y"]
+[ext_resource type="Texture2D" uid="uid://d2i15qf34n027" path="res://assets/compass/upscaled/compass_south.png" id="4_5wd8o"]
+[ext_resource type="Texture2D" uid="uid://b5p3idq8hrly4" path="res://assets/compass/upscaled/compass_west.png" id="5_dqsf1"]
+[ext_resource type="Texture2D" uid="uid://d3cccyrcymefy" path="res://assets/compass/upscaled/compass_north_east.png" id="6_wv45i"]
+[ext_resource type="Texture2D" uid="uid://cqbki4ewb5ciy" path="res://assets/compass/upscaled/compass_south_east.png" id="7_misc0"]
+[ext_resource type="Texture2D" uid="uid://ds2n8e6wn43rw" path="res://assets/compass/upscaled/compass_south_west.png" id="8_fvpwd"]
+[ext_resource type="Texture2D" uid="uid://ccjsh5dyjxvqf" path="res://assets/compass/upscaled/compass_north_west.png" id="9_cme47"]
+[ext_resource type="Texture2D" uid="uid://dsdoegtsrjepj" path="res://assets/compass/upscaled/compass.png" id="10_u44r5"]
+
+[node name="TinyCompassDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8xxi8")
+
+[node name="North" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_mfdau")
+
+[node name="East" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_33y5y")
+
+[node name="South" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_5wd8o")
+
+[node name="West" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_dqsf1")
+
+[node name="Northeast" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_wv45i")
+
+[node name="Southeast" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_misc0")
+
+[node name="Southwest" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_fvpwd")
+
+[node name="Northwest" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_cme47")
+
+[node name="None" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_u44r5")

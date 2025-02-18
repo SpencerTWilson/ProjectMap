@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://cffjdv5vq44wo"]
+
+[ext_resource type="Script" path="res://scenes/map_maker.gd" id="1_jumot"]
+[ext_resource type="Script" path="res://scenes/main_text_output.gd" id="1_olfnk"]
+[ext_resource type="Script" path="res://scenes/input_manager.gd" id="3_n7icx"]
+
+[node name="GameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextOutBackground" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.812
+anchor_bottom = 1.0
+offset_right = -0.424072
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainTextOutput" type="RichTextLabel" parent="Background/TextOutBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+scroll_following = true
+script = ExtResource("1_olfnk")
+text_speed = 40.0
+
+[node name="Menu" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.818
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.335999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background/Menu"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Helpful action buttons and stuff Not done!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MapMaker" type="Node" parent="."]
+script = ExtResource("1_jumot")
+
+[node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("text_out")]
+script = ExtResource("3_n7icx")
+text_out = NodePath("../Background/TextOutBackground/MainTextOutput")

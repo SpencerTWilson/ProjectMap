@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://d4h83ni0oa3hg"]
+
+[ext_resource type="Script" path="res://scenes/menus/lobby/lobby_manger.gd" id="1_8qj8l"]
+[ext_resource type="Script" path="res://scenes/menus/quit_btn.gd" id="1_cmdkn"]
+[ext_resource type="Theme" uid="uid://bs0jx1j8q2pqp" path="res://scenes/menus/themes/Buttons.tres" id="1_rb3il"]
+[ext_resource type="Script" path="res://scenes/menus/lobby/start_button.gd" id="2_7p6f5"]
+[ext_resource type="Theme" uid="uid://od3dtet0v7is" path="res://scenes/menus/themes/Title.tres" id="2_bhjj1"]
+[ext_resource type="Script" path="res://scenes/menus/settings/settings_button.gd" id="3_vwtux"]
+[ext_resource type="Script" path="res://scenes/menus/switch_scenes_btn.gd" id="4_njpg6"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rb3il")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.193
+anchor_right = 0.807
+anchor_bottom = 1.0
+offset_left = -0.335999
+offset_right = 0.335938
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_bhjj1")
+text = "Lobby"
+horizontal_alignment = 1
+
+[node name="PlayerNames" type="HBoxContainer" parent="VBoxContainer" node_paths=PackedStringArray("displays")]
+layout_mode = 2
+alignment = 1
+script = ExtResource("1_8qj8l")
+displays = [NodePath("PlayerNames1-3/Player1Name"), NodePath("PlayerNames1-3/Player2Name"), NodePath("PlayerNames1-3/Player3Name"), NodePath("PlayerNames4-6/Player4Name"), NodePath("PlayerNames4-6/Player5Name"), NodePath("PlayerNames4-6/Player6Name"), NodePath("PlayerNames7-9/Player7Name"), NodePath("PlayerNames7-9/Player8Name"), NodePath("PlayerNames7-9/Player9Name")]
+
+[node name="PlayerNames1-3" type="VBoxContainer" parent="VBoxContainer/PlayerNames"]
+layout_mode = 2
+alignment = 1
+
+[node name="Player1Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames1-3"]
+layout_mode = 2
+
+[node name="Player2Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames1-3"]
+layout_mode = 2
+
+[node name="Player3Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames1-3"]
+layout_mode = 2
+
+[node name="PlayerNames4-6" type="VBoxContainer" parent="VBoxContainer/PlayerNames"]
+layout_mode = 2
+alignment = 1
+
+[node name="Player4Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames4-6"]
+layout_mode = 2
+
+[node name="Player5Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames4-6"]
+layout_mode = 2
+
+[node name="Player6Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames4-6"]
+layout_mode = 2
+
+[node name="PlayerNames7-9" type="VBoxContainer" parent="VBoxContainer/PlayerNames"]
+layout_mode = 2
+alignment = 1
+
+[node name="Player7Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames7-9"]
+layout_mode = 2
+
+[node name="Player8Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames7-9"]
+layout_mode = 2
+
+[node name="Player9Name" type="Label" parent="VBoxContainer/PlayerNames/PlayerNames7-9"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+script = ExtResource("2_7p6f5")
+next_scene = "res://scenes/game/game_screen.tscn"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+script = ExtResource("3_vwtux")
+
+[node name="QuitToTitleButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit to Title"
+script = ExtResource("4_njpg6")
+next_scene = "res://scenes/menus/title_screen.tscn"
+
+[node name="QuitApplicationButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit To Desktop"
+script = ExtResource("1_cmdkn")
