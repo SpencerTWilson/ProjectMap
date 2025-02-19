@@ -36,10 +36,11 @@ func _input(event: InputEvent) -> void:
 		return
 	
 	if Map.move_player(move_dir):
+		MultiplayerManager._update_peers_stable.rpc({"entered_dir": move_dir})
 		var player_pos = MultiplayerManager.stable_player_data[multiplayer.get_unique_id()]["position"]
 		var dir_string: String = ""
 		for side in Map.map[player_pos]:
-			if Map.sides.has(side):
+			if Map.directions.has(side):
 				dir_string += side
 				dir_string += ", "
 		text_out._print_text("[color=Slategray]You moved [/color]%s[color=Slategray] to a[/color] %s[color=Slategray] space.\nYou can move in dir(s)[/color] %s" % [move_dir, Map.map[player_pos]["type"], dir_string])

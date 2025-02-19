@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://br83xu4qn5w3w"]
+
+[ext_resource type="Shader" path="res://scenes/game/compass/direction_highlight.gdshader" id="1_47qmf"]
+
+[resource]
+shader = ExtResource("1_47qmf")
+shader_parameter/sine_amplitude = Vector2(0, 2)
+shader_parameter/sine_speed = Vector2(5, 5)

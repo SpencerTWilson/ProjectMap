@@ -73,7 +73,7 @@ func connect_disconnects():
 	get_cell_patch(map.keys().pick_random())
 	
 	for cell in map.keys():
-		if !checked_cells.has(cell):
+		if !checked_cells.has(cell): # and map[cell]["directions"].size() < 8:
 			var cell_in_map = checked_cells.pick_random()
 			map[cell][find_unconnected_dir(cell)[0]] = cell_in_map
 			map[cell_in_map][find_unconnected_dir(cell_in_map)[0]] = cell
@@ -92,7 +92,7 @@ var done_checking: bool = false
 func get_cell_patch(cell):
 	checked_cells.append(cell)
 	for connected_dir in map[cell]:
-		if !sides.has(connected_dir): continue
+		if !directions.has(connected_dir): continue
 		if !checked_cells.has(map[cell][connected_dir]):
 			get_cell_patch(map[cell][connected_dir])
 	
@@ -213,7 +213,7 @@ var cell_types: Array = [
 	"Yellow"
 ]
 
-var sides: Array = [
+var directions: Array = [
 	"North",
 	"Northeast",
 	"East",

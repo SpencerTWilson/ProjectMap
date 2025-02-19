@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cffjdv5vq44wo"]
+[gd_scene load_steps=6 format=3 uid="uid://cffjdv5vq44wo"]
 
 [ext_resource type="Script" path="res://scenes/game/map_maker.gd" id="1_jumot"]
 [ext_resource type="Script" path="res://scenes/game/main_text_output.gd" id="1_olfnk"]
 [ext_resource type="Script" path="res://scenes/game/coin_display.gd" id="2_jy6do"]
 [ext_resource type="Script" path="res://scenes/game/input_manager.gd" id="3_n7icx"]
+[ext_resource type="PackedScene" uid="uid://4kak3hkqfnb5" path="res://scenes/game/compass/compass.tscn" id="5_3beb0"]
 
 [node name="GameScreen" type="Control"]
 layout_mode = 3
@@ -82,3 +83,10 @@ script = ExtResource("1_jumot")
 [node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("text_out")]
 script = ExtResource("3_n7icx")
 text_out = NodePath("../Background/TextOutBackground/MainTextOutput")
+
+[node name="Compass" parent="." instance=ExtResource("5_3beb0")]
+layout_mode = 1
+offset_left = 748.0
+offset_top = 322.0
+offset_right = 748.0
+offset_bottom = 322.0
